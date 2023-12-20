@@ -1,12 +1,19 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 // import React from 'react'
 import { Player } from '@lottiefiles/react-lottie-player';
 import { data } from '../assets/data'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
+import { useNavigate } from 'react-router-dom';
+
+import { useDispatch} from 'react-redux';
+import * as AppSlice from '../redux/slices/app'
+
 
 export default function Home() {
-  // const [count, setCount] = React.useState(0)
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   return (
     <div id='home'>
@@ -49,9 +56,13 @@ export default function Home() {
           {
             data.map((project, index) => {
               return (
-                <div key={index}
+                <div key={index} onClick={() => {
+                  window.scrollTo(0,0)
+                  dispatch(AppSlice.setProject(project))
+                  navigate(`/detail/${String(project.name).toLowerCase().replaceAll(' ', '-')}`)
+                }}
                   className='border-gray bottom-2 shadow-sm hover:bg-black 
-              flex flex-col items-center p-4 border-2 border-black hover:text-white hover:cursor-pointer max-w-[360px]' >
+                  flex flex-col items-center p-4 border-2 border-black hover:text-white hover:cursor-pointer max-w-[360px]' >
                   <img src={project.image} alt={project.name} style={{ maxWidth: 240, objectFit: 'scale-down', objectPosition: 'center' }} />
                   <p className=' font-bold text-xl p-2'>{project.name}</p>
                   <div className='flex gap-2 flex-wrap justify-center'>

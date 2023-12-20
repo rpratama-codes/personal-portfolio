@@ -1,10 +1,13 @@
-// import React from 'react'
+import React from 'react'
+import { useNavigate } from "react-router-dom"
 
 export default function Navbar() {
+	const navigate = useNavigate()
+
 	return (
 		<nav className='container mx-auto flex justify-between items-center'>
 			<div>
-				<img className='h-20 min-h-20' src='/assets/images/logo.svg' />
+				<img onClick={() => navigate("/")} className='h-20 min-h-20' src='/assets/images/logo.svg' />
 			</div>
 			<div className='flex'>
 				{/* <div className='flex flex-col h-fit p-4  border-black hover:bg-black hover:text-white hover:cursor-pointer'>
