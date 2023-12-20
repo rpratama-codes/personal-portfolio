@@ -6,14 +6,18 @@ import AnimatedCursor from "react-animated-cursor"
 import { RouterProvider } from "react-router-dom";
 import router from './router'
 
+import { store } from './redux/store'
+import { Provider as StoreProvider } from 'react-redux';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AnimatedCursor
+    <StoreProvider store={store}>
+      <AnimatedCursor
         color="0,0,0"
         innerSize={30}
         outerSize={40}
-        innerScale={1}
-        outerScale={4}
+        innerScale={0.5}
+        outerScale={1}
         outerAlpha={1}
         hasBlendMode={true}
         trailingSpeed={1}
@@ -25,6 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           mixBlendMode: 'exclusion'
         }}
       />
-    <RouterProvider router={router}/>
+      <RouterProvider router={router} />
+    </StoreProvider>
   </React.StrictMode>,
 )
