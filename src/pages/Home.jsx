@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
 import { useNavigate } from 'react-router-dom';
 
-import { useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 import * as AppSlice from '../redux/slices/app'
 
 
@@ -37,7 +37,7 @@ export default function Home() {
         </div>
 
         <div className=" flex flex-col items-center gap-2 drop-shadow-2xl max-lg:order-first max-lg:pt-10">
-          <img className=' h-96 object-scale-down' src='/assets/images/me.png' />
+          <img className=' h-96 object-scale-down' src='https://res.cloudinary.com/owncloudinarycdn/image/upload/v1703088002/cth9hc7lvoitbezc6nlm.png' />
           <div className="text-center">
             <p className=" font-bold text-3xl">Rizqi Pratama</p>
             <p>Backend | Fullstack Developer</p>
@@ -57,7 +57,7 @@ export default function Home() {
             data.map((project, index) => {
               return (
                 <div key={index} onClick={() => {
-                  window.scrollTo(0,0)
+                  window.scrollTo(0, 0)
                   dispatch(AppSlice.setProject(project))
                   navigate(`/detail/${String(project.name).toLowerCase().replaceAll(' ', '-')}`)
                 }}
