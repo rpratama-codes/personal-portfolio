@@ -5,14 +5,13 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import { data } from '../assets/data'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
 import * as AppSlice from '../redux/slices/app'
 
 
 export default function Home() {
-  const navigate = useNavigate()
   const dispatch = useDispatch()
 
   return (
@@ -56,13 +55,12 @@ export default function Home() {
           {
             data.map((project, index) => {
               return (
-                <div key={index} onClick={() => {
+                <Link key={index} to={`/detail/${String(project.name).toLowerCase().replaceAll(' ', '-')}`} onClick={() => {
                   window.scrollTo(0, 0)
                   dispatch(AppSlice.setProject(project))
-                  navigate(`/detail/${String(project.name).toLowerCase().replaceAll(' ', '-')}`)
                 }}
                   className='border-gray bottom-2 shadow-sm hover:bg-black 
-                  flex flex-col items-center p-4 border-2 border-black hover:text-white hover:cursor-pointer max-w-[360px]' >
+                  flex flex-col items-center p-4 border-2 border-black hover:text-white max-w-[360px]' >
                   <img src={project.image} alt={project.name} style={{ maxWidth: 240, objectFit: 'scale-down', objectPosition: 'center' }} />
                   <p className=' font-bold text-xl p-2'>{project.name}</p>
                   <div className='flex gap-2 flex-wrap justify-center'>
@@ -70,7 +68,7 @@ export default function Home() {
                       project.stack.map((stack, index) => <p key={index} className='p-2 border-2 border-gray'>{stack} </p>)
                     }
                   </div>
-                </div>
+                </Link>
               )
             })
           }

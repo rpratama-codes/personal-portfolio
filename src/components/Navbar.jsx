@@ -1,5 +1,6 @@
-import React from 'react'
+// import React from 'react'
 import { useNavigate } from "react-router-dom"
+import * as Icons from 'react-feather'
 
 export default function Navbar() {
 	const navigate = useNavigate()
@@ -13,9 +14,12 @@ export default function Navbar() {
 				{/* <div className='flex flex-col h-fit p-4  border-black hover:bg-black hover:text-white hover:cursor-pointer'>
             <p className=' font-bold text-xl'>Project Gallery</p>
           </div> */}
-				<div className='flex flex-col h-fit p-4  border-black hover:bg-black hover:text-white hover:cursor-pointer'>
-					<p className=' font-bold text-xl'>Get in touch.</p>
-				</div>
+				<a href="https://www.linkedin.com/in/rizqi-pratama" target='_blank' rel="noreferrer">
+					<div className='flex  items-center justify-center h-fit p-4  border-black hover:bg-black hover:text-white gap-3'>
+						<Icons.Linkedin />
+						<p className='font-bold '>Connect on Linkedin</p>
+					</div>
+				</a>
 			</div>
 		</nav>
 	)

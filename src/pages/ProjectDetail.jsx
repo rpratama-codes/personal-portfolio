@@ -2,14 +2,13 @@ import React from 'react'
 import { data } from '../assets/data'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as AppSlice from '../redux/slices/app'
 import * as Icons from 'react-feather'
 
 export default function ProjectDetail() {
   const { project_name } = useParams()
-  const navigate = useNavigate()
   const dispatch = useDispatch()
 
   React.useEffect(() => {
@@ -103,25 +102,25 @@ export default function ProjectDetail() {
 
             <div className='mt-10'>
               <p className='font-bold text-xl mb-5'>Other Project</p>
-              <div className='mx-auto flex flex-wrap gap-2 justify-center'>
+              <div className='mx-auto flex flex-wrap gap-2 justify-start'>
                 {
                   data.map((project, index) => {
                     const hide = String(project?.name).toLowerCase().replaceAll(' ', '-') === project_name
                     if (!hide) {
                       return (
-                        <div key={index} onClick={() => {
-                          window.scrollTo(0, 0)
-                          dispatch(AppSlice.setProject(project))
-                          navigate(`/detail/${String(project.name).toLowerCase().replaceAll(' ', '-')}`)
-                        }}
-                          className='border-gray shadow-sm hover:bg-black 
-                          flex flex-col p-4 border-2 border-black hover:text-white hover:cursor-pointer w-full'>
+                        <Link key={index} to={`/detail/${String(project.name).toLowerCase().replaceAll(' ', '-')}`}
+                          onClick={() => {
+                            window.scrollTo(0, 0)
+                            dispatch(AppSlice.setProject(project))
+                          }}
+                          className='shadow-sm hover:bg-black flex flex-col flex-grow p-4 border-2 border-black hover:text-white'>
+
                           <div className='flex w-full gap-4'>
                             <img src={project.image} alt={project.name} style={{ height: 64, objectFit: 'scale-down', objectPosition: 'center' }} />
                             <p className=' font-bold text-xl p-2'>{project.name}</p>
                           </div>
 
-                        </div>
+                        </Link>
                       )
                     } else {
                       return null
