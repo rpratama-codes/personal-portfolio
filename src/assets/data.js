@@ -2,7 +2,7 @@ export const data = [
     {
         name: "Mama Recipe & Orenji Backend",
         image: "https://res.cloudinary.com/dwptyupfa/image/upload/v1702826733/personal/cvynrvf04nbw3h1ltxxm.png",
-        description: "Halo selamat datang di repo project ini, project ini adalah versi mobole dari web mama recipe, Mama Recipe adalah website untuk melihat, membuat, dan membagikan resep. ada juga resep yang disediakan oleh saya selaku developernya hehe, meskipun begitu resep dijamin valid, ragu? boleh dicoba.",
+        description: "This is a about Backend service for Mama Recipe and Orenji, both are same backend while Orenji is One of a Mobile version from Mama Recipe Project. This Project is about a recipe applicaion that has a service like adding,save,favorite,like recipe, and other. Note : The ilustration below not an actual data flow, it just an overview from overall business logic.",
         repo: "https://github.com/rizqikazukun/mama-recipe-web-be",
         collection: 'https://documenter.getpostman.com/view/31887036/2s9YkoeMvV',
         stack: ["Javascript", "ExpressJS", "Sequelize", "Postgres", "FCM (Admin)", "Firestore (Admin)", "Smtp", "Cloudinary", "Jsonwebtoken", "cors", "helmet"],
@@ -20,7 +20,7 @@ export const data = [
     {
         name: "Orenji Mobile",
         image: "https://res.cloudinary.com/dwptyupfa/image/upload/v1702814876/personal/bqi2ecb0l1ajzkqxyyji.png",
-        description: "Halo selamat datang di repo project ini, project ini adalah versi mobole dari web mama recipe, Mama Recipe adalah website untuk melihat, membuat, dan membagikan resep. ada juga resep yang disediakan oleh saya selaku developernya hehe, meskipun begitu resep dijamin valid, ragu? boleh dicoba.",
+        description: "Halo selamat datang di project ini, Project ini adalah versi mobile dari web mama recipe, Mama Recipe adalah website untuk melihat, membuat, dan membagikan resep. Existing Feature antara lain login, register, search recipe, save recipe. untuk add recipe saat ini belum tersedia, dan bisa menggunakan web terlebih daulu.",
         repo: "https://github.com/rizqikazukun/orenji-native-mobile",
         apk: 'https://github.com/rizqikazukun/orenji-native-mobile/releases/tag/debug-preview',
         stack: ["Javascript", "React Native", "React Native Navigation", "Firebase Cloud Messaging (Client)", "Redux"],
@@ -29,7 +29,7 @@ export const data = [
     {
         name: "Peworld Frontend",
         image: "https://res.cloudinary.com/dwptyupfa/image/upload/v1702814032/personal/epusaqfvj9u7utqzopek.png",
-        description: "This repo contains a react project with next framework. The project itself is about a talent hiring app for recruiters. feel free to see.",
+        description: "TPeworld Hiring web. learning base project from pijarcamp. Using NextJS Framework as the base of the project. For more Peworld is a hiring app that connects recruiters and job seekers in the industry 4.0. Exsiting Feature are Login, Register, search talent, hiring talent.",
         repo: "https://github.com/rizqikazukun/peworld-hiring-app",
         link: "https://peworld-hiring-app.vercel.app",
         stack: ["javascript", "React", "NextJS", "Tailwind", "SASS"],
@@ -38,7 +38,7 @@ export const data = [
     {
         name: "Tickitz Backend",
         image: "https://res.cloudinary.com/dwptyupfa/image/upload/v1702826733/personal/glj3io7rq2b0ilbvaj5l.png",
-        description: "Halo selamat datang di repo project ini, project ini adalah versi mobole dari web mama recipe, Mama Recipe adalah website untuk melihat, membuat, dan membagikan resep. ada juga resep yang disediakan oleh saya selaku developernya hehe, meskipun begitu resep dijamin valid, ragu? boleh dicoba.",
+        description: "It's a tickitz backend. learning base project from pijarcamp. This a movie cinema ticketing app, you can see current month movie show, and upcoming movie on next month.",
         repo: "https://github.com/rizqikazukun/tickitz-be",
         collection: 'https://documenter.getpostman.com/view/31887036/2s9YkoeMvT',
         stack: ["Javascript", "ExpressJS", "Postgres", "Jsonwebtoken", "cors", "helmet"],
