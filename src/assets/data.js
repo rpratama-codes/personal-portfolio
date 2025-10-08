@@ -1,5 +1,21 @@
 export const data = [
     {
+        name: "Wooz Backend",
+        image: "https://ik.imagekit.io/rcloud/app-thumbnail/wooz-backend-thumb.png",
+        description: "Woozify is a service that allows users to shorten URLs and generate QR codes. The features include shortening URLs, providing engagement analytics, and a QR Maker. The pricing types are guest, free, and paid.",
+        repo: "https://github.com/rpratama-codes/wooz-shortener-backend",
+        stack: ["Typescript", "NestJS", "Prisma", "Postgres", "Jsonwebtoken", "cors", "helmet", "Rate Limiter",],
+    },
+    {
+        name: "Wooz Frontend",
+        image: "https://ik.imagekit.io/rcloud/app-thumbnail/wooz-frontend-thumb.png",
+        description: "Woozify is a service that allows users to shorten URLs and generate QR codes. The features include shortening URLs, providing engagement analytics, and a QR Maker. The pricing types are guest, free, and paid.",
+        repo: "https://github.com/rpratama-codes/wooz-shortener-frontend",
+        link: "https://wooz.vercel.app",
+        stack: ["NextJS", "Tailwind", "Lottie"],
+        image_hero: 'https://ik.imagekit.io/rcloud/app-overview/overview-wooz.png'
+    },
+    {
         name: "Mama Recipe & Orenji Backend",
         image: "https://res.cloudinary.com/dwptyupfa/image/upload/v1702826733/personal/cvynrvf04nbw3h1ltxxm.png",
         description: "This is a about Backend service for Mama Recipe and Orenji, both are same backend while Orenji is One of a Mobile version from Mama Recipe Project. This Project is about a recipe applicaion that has a service like adding,save,favorite,like recipe, and other. Note : The ilustration below not an actual data flow, it just an overview from overall business logic.",
