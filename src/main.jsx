@@ -13,7 +13,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <StoreProvider store={store}>
       <ConditionalCursor />
-      <ConditionalCursor />
       <RouterProvider router={router} />
     </StoreProvider>
   </React.StrictMode>,

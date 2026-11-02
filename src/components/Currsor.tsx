@@ -30,11 +30,10 @@ export const ConditionalCursor = () => {
       outerSize={40}
       innerScale={1}
       outerScale={2}
-      outerAlpha={1}
       trailingSpeed={1}
       innerStyle={{
         backgroundColor: "#fff",
-        mixBlendMode: "revert",
+        mixBlendMode: "difference",
       }}
       outerStyle={{
         mixBlendMode: "difference",
